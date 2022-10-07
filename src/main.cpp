@@ -7,6 +7,7 @@
 
 #include "hello.hpp"
 
+//! @file main.cpp
 int main(int argc, char* argv[]) {
   auto component_list = userver::components::MinimalServerComponentList()
                             .Append<userver::server::handlers::Ping>()
@@ -14,7 +15,7 @@ int main(int argc, char* argv[]) {
                             .Append<userver::components::HttpClient>()
                             .Append<userver::server::handlers::TestsControl>();
 
-  pg_service_template::AppendHello(component_list);
+  pg_lecture::AppendHello(component_list);
 
   return userver::utils::DaemonMain(argc, argv, component_list);
 }

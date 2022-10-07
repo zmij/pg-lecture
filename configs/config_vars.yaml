@@ -1,3 +1,4 @@
+# configs/config_vars.yaml
 worker-threads: 4
 worker-fs-threads: 2
 logger-level: debug
@@ -6,4 +7,4 @@ is_testing: false
 
 server-port: 8080
 
-dbconnection: 'postgresql://pg_service_template_user:password@localhost:5432/pg_service_template_db-1'
+dbconnection: 'postgresql://pg-lecture_user:password@localhost:5432/pg-lecture_db-1'
