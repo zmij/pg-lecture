@@ -1,3 +1,4 @@
+// src/hello.hpp
 #pragma once
 
 #include <string>
@@ -7,7 +8,16 @@
 
 namespace pg_lecture {
 
-enum class UserType { kFirstTime, kKnown };
+enum class UserType {
+  kFirstTime,
+  kKnown,
+};
+
+struct User {
+  std::string name;
+  UserType type;
+};
+
 std::string SayHelloTo(std::string_view name, UserType type);
 
 void AppendHello(userver::components::ComponentList& component_list);
